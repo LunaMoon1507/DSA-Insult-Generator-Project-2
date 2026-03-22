@@ -4,7 +4,7 @@ project(DSA_Insult_Generator_Project_2)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DSA_Insult_Generator_Project_2
-        HashTable.cpp
-        main.cpp
-        Tree.cpp
-        Word.cpp)
+        src/HashTable.cpp
+        src/main.cpp
+        src/Tree.cpp
+        src/Word.cpp)
