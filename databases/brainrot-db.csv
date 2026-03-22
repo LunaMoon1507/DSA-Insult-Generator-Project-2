@@ -1,151 +1,140 @@
 word,severity,vibe,pos
-67,,brainrot,
-airball,,brainrot,
-beta,,brainrot,
-sigma,,brainrot,
-alpha ,,brainrot,
-alt,,brainrot,
-aura,,brainrot,
-aura check,,brainrot,
-beef,,brainrot,
-bet,,brainrot,
-big mood,,brainrot,
-blud,,brainrot,
-bougie,,brainrot,
-brainrot,,brainrot,
-bruh,,brainrot,
-bussin,,brainrot,
-canceled,,brainrot,
-cap,,brainrot,
-gigachad,,brainrot,
-chad,,brainrot,
-cheugy,,brainrot,
-clanker,,brainrot,
-cooked,,brainrot,
-corecore,,brainrot,
-cornification,,brainrot,
-cottagecore,,brainrot,
-cracked,,brainrot,
-crash out,,brainrot,
-cringe,,brainrot,
-crunchy,,brainrot,
-chat,,brainrot,
-delulu,,brainrot,
-doge,,brainrot,
-doomscrolling,,brainrot,
-drip,,brainrot,
-elite ball knowledge,,brainrot,
-fan behavior,,brainrot,
-fandoms,,brainrot,
-fanum tax,,brainrot,
-flex,,brainrot,
-fr,,brainrot,
-ghosting,,brainrot,
-glitching,,brainrot,
-glow-up,,brainrot,
-goated with the sauce,,brainrot,
-goblin mode,,brainrot,
-goblin mode,,brainrot,
-goofy ahh,,brainrot,
-goon/gooning,,brainrot,
-grimace shake,,brainrot,
-grindset,,brainrot,
-gyatt,,brainrot,
-hitting the griddy,,brainrot,
-it⊙s the [x] for me,,brainrot,
-italian brainrot,,brainrot,
-john pork,,brainrot,
-karen,,brainrot,
-knee surgery,,brainrot,
-L,,brainrot,
-looksmaxxing,,brainrot,
-low-key,,brainrot,
-main character energy,,brainrot,
-mewing,,brainrot,
-mid,,brainrot,
-no cap,,brainrot,
-nonchalant dreadhead,,brainrot,
-noob,,brainrot,
-not the [x] again!,,brainrot,
-not the mosquito again,,brainrot,
-npc,,brainrot,
-ohio,,brainrot,
-oi oi oi baka,,brainrot,
-ok boomer,,brainrot,
-only in ohio,,brainrot,
-period,,brainrot,
-pmo,,brainrot,
-pick-me girl,,brainrot,
-plebian,,brainrot,
-pookie,,brainrot,
-ragebait,,brainrot,
-ratioed,,brainrot,
-rent free,,brainrot,
-rizz,,brainrot,
-roman empire,,brainrot,
-savage,,brainrot,
-say less,,brainrot,
-sheesh!,,brainrot,
-ship,,brainrot,
-shlawg,,brainrot,
-side eye,,brainrot,
-sigma,,brainrot,
-simp,,brainrot,
-skibidi,,brainrot,
-skibidi rizzler,,brainrot,
-slaps,,brainrot,
-slay,,brainrot,
-slime,,brainrot,
-slop,,brainrot,
-soft,,brainrot,
-speedrun,,brainrot,
-spiraling,,brainrot,
-stan,,brainrot,
-sus,,brainrot,
-sussy,,brainrot,
-sybau,,brainrot,
-tea,,brainrot,
-thirst trap,,brainrot,
-too fire,,brainrot,
-top g,,brainrot,
-touch grass,,brainrot,
-ts,,brainrot,
-unc,,brainrot,
-uwu,,brainrot,
-vibe,,brainrot,
-vibe check,,brainrot,
-W,,brainrot,
-yass,,brainrot,
-yeet,,brainrot,
-you do you,,brainrot,
-zesty,,brainrot,
-lock in,,brainrot,
-slay,,brainrot,
-based,,brainrot,
-yassified,,brainrot,
-canon,,brainrot,
-ship,,brainrot,
-gatekeep,,brainrot,
-simp purr,,brainrot,
-ate (and left no crumbs),,brainrot,
-i can't,,brainrot,
-it's giving...,,brainrot,
-feral,,brainrot,
-literally me,,brainrot,
-gaslight,,brainrot,
-ratio,,brainrot,
-obsessed,,brainrot,
-headcanon,,brainrot,
-sigma,,brainrot,
-skibidi,,brainrot,
-rizz,,brainrot,
-gritty,,brainrot,
-npc,,brainrot,
-ohio,,brainrot,
-bing chilling,,brainrot,
-goofy ahh,,brainrot,
-quandale dingle,,brainrot,
-giga chad,,brainrot,
-shrekposting,,brainrot,
-eepy,,brainrot,
-shmove,,brainrot,
+67,2,brainrot,noun
+airball,1,brainrot,noun
+beta,2,brainrot,noun
+sigma,3,brainrot,noun
+alpha ,3,brainrot,noun
+alt,2,brainrot,adjective
+aura,2,brainrot,noun
+aura check,2,brainrot,noun
+beef,1,brainrot,noun
+bet,1,brainrot,noun
+big mood,1,brainrot,noun
+blud,3,brainrot,noun
+bougie,2,brainrot,adjective
+brainrot,1,brainrot,noun
+bruh,1,brainrot,noun
+bussin,2,brainrot,adjective
+canceled,1,brainrot,noun
+cap,1,brainrot,noun
+gigachad,2,brainrot,noun
+chad,2,brainrot,noun
+cheugy,3,brainrot,adjective
+clanker,4,brainrot,noun
+cooked,2,brainrot,noun
+cornification,1,brainrot,noun
+cottagecore,1,brainrot,adjective
+cracked,2,brainrot,adjective
+crash out,2,brainrot,noun
+cringe,1,brainrot,adjective
+crunchy,1,brainrot,adjective
+chat,2,brainrot,noun
+delulu,2,brainrot,adjective
+doge,1,brainrot,noun
+doomscrolling,2,brainrot,verb
+drip,1,brainrot,noun
+elite ball knowledge,3,brainrot,noun
+fan behavior,2,brainrot,noun
+fandoms,1,brainrot,noun
+fanum tax,3,brainrot,noun
+flex,2,brainrot,noun
+ghosting,1,brainrot,verb
+glitching,1,brainrot,verb
+glow-up,1,brainrot,noun
+goated with the sauce,2,brainrot,adjective
+goblin mode,3,brainrot,noun
+goofy ahh,2,brainrot,adjective
+goon,2,brainrot,noun
+grimace shake,2,brainrot,noun
+grindset,1,brainrot,noun
+gyatt,4,brainrot,noun
+hitting the griddy,2,brainrot,verb
+italian brainrot,2,brainrot,noun
+john pork,3,brainrot,noun
+karen,1,brainrot,noun
+knee surgery,3,brainrot,noun
+L,1,brainrot,noun
+looksmaxxing,2,brainrot,adjective
+low-key,2,brainrot,adjective
+main character energy,3,brainrot,noun
+mewing,2,brainrot,verb
+mid,1,brainrot,noun
+no cap,1,brainrot,noun
+nonchalant dreadhead,4,brainrot,noun
+noob,1,brainrot,noun
+npc,1,brainrot,noun
+ohio,1,brainrot,noun
+oi oi oi baka,1,brainrot,noun
+ok boomer,1,brainrot,noun
+only in ohio,1,brainrot,noun
+period,1,brainrot,noun
+pmo,1,brainrot,noun
+pick-me girl,2,brainrot,adjective
+plebian,3,brainrot,noun
+pookie,2,brainrot,noun
+ragebait,2,brainrot,noun
+ratioed,1,brainrot,adjective
+rent free,1,brainrot,adjective
+rizz,1,brainrot,noun
+roman empire,1,brainrot,noun
+savage,1,brainrot,adjective
+say less,1,brainrot,noun
+sheesh!,2,brainrot,noun
+ship,1,brainrot,noun
+shlawg,1,brainrot,noun
+side eye,1,brainrot,noun
+sigma,2,brainrot,adjective
+simp,2,brainrot,noun
+skibidi,2,brainrot,adjective
+skibidi rizzler,3,brainrot,noun
+slaps,1,brainrot,verb
+slay,1,brainrot,noun
+slime,3,brainrot,verb
+slop,2,brainrot,noun
+soft,1,brainrot,adjective
+speedrun,2,brainrot,noun
+spiraling,2,brainrot,verb
+stan,2,brainrot,verb
+sus,2,brainrot,adjective
+sussy,3,brainrot,adjective
+sybau,2,brainrot,noun
+tea,1,brainrot,noun
+thirst trap,1,brainrot,noun
+too fire,1,brainrot,noun
+top g,1,brainrot,noun
+never touches grass,2,brainrot,adjective
+unc,3,brainrot,noun
+vibe,1,brainrot,noun
+vibe check,1,brainrot,noun
+W,1,brainrot,noun
+yass,1,brainrot,noun
+yeet,1,brainrot,verb
+you do you,1,brainrot,noun
+zesty,2,brainrot,adjective
+lock in,2,brainrot,noun
+slay,2,brainrot,verb
+based,2,brainrot,adjective
+yassified,1,brainrot,adjective
+canon,1,brainrot,noun
+ship,1,brainrot,noun
+gatekeep,2,brainrot,verb
+simp purr,3,brainrot,noun
+ate (and left no crumbs),2,brainrot,verb
+feral,1,brainrot,noun
+gaslight,2,brainrot,verb
+ratio,1,brainrot,noun
+obsessed,1,brainrot,adjective
+headcanon,1,brainrot,noun
+sigma,3,brainrot,adjective
+skibidi,3,brainrot,adjective
+rizz,2,brainrot,noun
+gritty,1,brainrot,adjective
+npc,1,brainrot,adjective
+ohio,1,brainrot,noun
+bing chilling,1,brainrot,adjective
+goofy ahh,1,brainrot,adjective
+quandale dingle,3,brainrot,noun
+giga chad,2,brainrot,noun
+shrekposting,1,brainrot,verb
+eepy,1,brainrot,adjective
+shmove,1,brainrot,noun
