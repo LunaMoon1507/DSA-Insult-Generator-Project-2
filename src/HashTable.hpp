@@ -1,4 +1,4 @@
-#include "Word.hpp"
+#include "Word.cpp"
 #include <vector>
 #include <string>
 
