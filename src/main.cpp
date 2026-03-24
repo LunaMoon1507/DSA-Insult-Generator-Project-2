@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Word.cpp"
 #include "Tree.cpp"
-#include "HashTable.cpp"
+#include "HashTable.hpp"
 
 int main() {
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
@@ -24,13 +24,13 @@ int main() {
     Welcome to the CS Major insult generator!
 
     What vibe would you like your insult to have?
-    1. Basic
+    1. Random
     2. Explicit
     3. Stupid/brainrot
     4. Professional
     Choice: 1
 
-    You've chosen Basic mode.
+    You've chosen Random mode.
     What severity would you like your insult to have?
     1. Mild
     2. Moderate
@@ -38,7 +38,7 @@ int main() {
     4. Brutal
     Choice: 2
 
-    You've chosen a Basic, Moderate severity insult (level 2).
+    You've chosen a Random, Moderate severity insult (level 2).
     Generating...
 
     Insult: "You're a dumb monkey and an excessively greasy gamer, and worst of all a stinking CS major!"
