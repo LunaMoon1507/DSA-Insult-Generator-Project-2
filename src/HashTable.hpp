@@ -10,6 +10,7 @@ struct HashTable {
     int hash(int POS, int vibe, int severity);
     void insert(Word* data);
     std::string get(std::string POS, std::string vibe, int severity);
+    std::string getRandom(std::string POS);
 
     //these lines help decode the string values in the word object to ints
     int decodePOS(std::string str);

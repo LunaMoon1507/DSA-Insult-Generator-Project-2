@@ -34,10 +34,24 @@ std::string HashTable::get(std::string POS, std::string vibe, int desiredSeverit
     int vecLen = hash_table[desiredHash].size();
     if (vecLen == 0) return ""; // if somehow there is no data in this section
     if (vecLen == 1) return hash_table[desiredHash][0]->word;
-    std::uniform_int_distribution<> dist(0, vecLen-1);
+    std::uniform_int_distribution<int> dist(0, vecLen-1);
     return hash_table[desiredHash][dist(gen)]->word;
 }
 
+std::string HashTable::getRandom(std::string POS) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> distS(0, 3);
+    int desiredPOS = decodePOS(POS);
+    int desiredVibe = distS(gen);
+    int desiredSeverity = distS(gen);
+    int desiredHash = hash(desiredPOS, desiredVibe, desiredSeverity);
+    int vecLen = hash_table[desiredHash].size();
+    if (vecLen == 0) return ""; // if somehow there is no data in this section
+    if (vecLen == 1) return hash_table[desiredHash][0]->word;
+    std::uniform_int_distribution<int> distL(0, vecLen-1);
+    return hash_table[desiredHash][distL(gen)]->word;
+}
 int HashTable::decodePOS(std::string str) {
     if (str == "noun") return 0;
     if (str == "adjective") return 1;
