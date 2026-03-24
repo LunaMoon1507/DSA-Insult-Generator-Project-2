@@ -5,7 +5,7 @@
 struct HashTable {
     std::vector<std::vector<Word*>> hash_table;
 
-    HashTable() : hash_table(256, std::vector<Word*>(0)) {}
+    HashTable() : hash_table(64, std::vector<Word*>(0)) {}
     ~HashTable();
     int hash(int POS, int vibe, int severity);
     void insert(Word* data);
