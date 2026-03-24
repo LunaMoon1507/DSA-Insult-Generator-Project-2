@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Word.cpp"
+#include "Word.hpp"
 #include "Tree.cpp"
 #include "HashTable.hpp"
 
