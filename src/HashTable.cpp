@@ -1,5 +1,6 @@
 #include "HashTable.hpp"
 #include <stdexcept>
+#include <random>
 
 HashTable::~HashTable() {
     for (int i = 0; i < 64; i++) {
@@ -22,6 +23,19 @@ void HashTable::insert(Word* data) {
     int currSeverity = data->severity;
     int currHash = hash(currPOS, currVibe, currSeverity);
     hash_table[currHash].push_back(data);
+}
+
+std::string HashTable::get(std::string POS, std::string vibe, int desiredSeverity) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    int desiredPOS = decodePOS(POS);
+    int desiredVibe = decodeVibe(vibe);
+    int desiredHash = hash(desiredPOS, desiredVibe, desiredSeverity);
+    int vecLen = hash_table[desiredHash].size();
+    if (vecLen == 0) return ""; // if somehow there is no data in this section
+    if (vecLen == 1) return hash_table[desiredHash][0]->word;
+    std::uniform_int_distribution<> dist(0, vecLen-1);
+    return hash_table[desiredHash][dist(gen)]->word;
 }
 
 int HashTable::decodePOS(std::string str) {

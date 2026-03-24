@@ -9,7 +9,7 @@ struct HashTable {
     ~HashTable();
     int hash(int POS, int vibe, int severity);
     void insert(Word* data);
-    std::string get(std::string POS, std::string vibe, std::string mode, int severity);
+    std::string get(std::string POS, std::string vibe, int severity);
 
     //these lines help decode the string values in the word object to ints
     int decodePOS(std::string str);
