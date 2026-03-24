@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Word.cpp"
 #include "Tree.cpp"
-#include "HashTable.cpp"
+#include "HashTable.hpp"
 
 int main() {
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
