@@ -1,115 +1,115 @@
 ﻿word,severity,vibe,pos
-syntax sniffer,1,CSmajor,CS-noun
-celcius-fueled,1,CSmajor,CS-noun
-keyboard gremlin,2,CSmajor,CS-noun
-commit freak,2,CSmajor,CS-noun
-stack overflow philosopher,1,CSmajor,CS-noun
-pixel hoarder,1,CSmajor,CS-noun
-semicolon junkie,1,CSmajor,CS-noun
-debug goblin,2,CSmajor,CS-noun
-binary bard,1,CSmajor,CS-noun
-RAM hoarder,2,CSmajor,CS-noun
-merge conflict magnet,2,CSmajor,CS-noun
-algorithm addict,1,CSmajor,CS-noun
-sleep-deprived coderling,2,CSmajor,CS-noun
-spaghetti code sorcerer,2,CSmajor,CS-noun
-API abuser,1,CSmajor,CS-noun
-git pusher extraordinaire,1,CSmajor,CS-noun
-commentless crusader,1,CSmajor,CS-noun
-runtime rambler,1,CSmajor,CS-noun
-deprecated dreamer,1,CSmajor,CS-noun
-library leech,2,CSmajor,CS-noun
-patchwork prodigy,1,CSmajor,CS-noun
-infinite loop enthusiast,1,CSmajor,CS-noun
-keyboard cowboy,1,CSmajor,CS-noun
-code-smelling cryptid,1,CSmajor,CS-noun
-whitespace warrior,1,CSmajor,CS-noun
-bracket breaker,1,CSmajor,CS-noun
-bug whisperer,1,CSmajor,CS-noun
-RAM vampire,1,CSmajor,CS-noun
-console log prophet,1,CSmajor,CS-noun
-caffeine compiler,1,CSmajor,CS-noun
-terminal troll,2,CSmajor,CS-noun
-IDE hermit,1,CSmajor,CS-noun
-compiler cultist,1,CSmajor,CS-noun
-syntax savant,1,CSmajor,CS-noun
-commit gremlin,1,CSmajor,CS-noun
-variable vandal,1,CSmajor,CS-noun
-rubber duck oracle,1,CSmajor,CS-noun
-race condition romantic,1,CSmajor,CS-noun
-overflow ogre,1,CSmajor,CS-noun
-runtime rascal,2,CSmajor,CS-noun
-object-oriented outlaw,1,CSmajor,CS-noun
-stack trace poet,1,CSmajor,CS-noun
-pointer poltergeist,1,CSmajor,CS-noun
-CLI caveman,2,CSmajor,CS-noun
-localhost recluse,1,CSmajor,CS-noun
-cache gremlin,2,CSmajor,CS-noun
-infinite recursion romantic,1,CSmajor,CS-noun
-greasy,2,CSmajor,CS-adjective
-code monkey,3,CSmajor,CS-noun
-stinking,2,CSmajor,CS-adjective
-basement dweller,3,CSmajor,CS-noun
-Discord moderator,2,CSmajor,CS-noun
-oily,3,CSmajor,CS-adjective
-no-shower,3,CSmajor,CS-adjective
-nerdy,2,CSmajor,CS-adjective
-no-sleep,2,CSmajor,CS-adjective
-unemployed,3,CSmajor,CS-adjective
-neckbeard,4,CSmajor,CS-noun
-league of legends player,4,CSmajor,CS-noun
-no-grass-toucher,4,CSmajor,CS-noun
-Reddit mod,3,CSmajor,CS-noun
-soydev,2,CSmajor,CS-noun
-vibecoder,2,CSmajor,CS-noun
-Valorant enjoyer,3,CSmajor,CS-noun
-no huzz,4,CSmajor,CS-adjective
-AI prompt parrot,2,CSmajor,CS-noun
-syntax-slop merchant,2,CSmajor,CS-noun
-copy-paste connoisseur,1,CSmajor,CS-noun
-vibecoding visionary,1,CSmajor,CS-noun
-chatbot code whisperer,1,CSmajor,CS-noun
-rubber duck reject,2,CSmajor,CS-noun
-stack overflow beggar,2,CSmajor,CS-noun
-merge conflict masochist,3,CSmajor,CS-noun
-spaghetti architect,1,CSmajor,CS-noun
-AI prompt engineer wannabe,2,CSmajor,CS-noun
-terminally online tinkerer,2,CSmajor,CS-noun
-keyboard atrophist,1,CSmajor,CS-noun
-dark mode dungeon dweller,1,CSmajor,CS-noun
-prompt-regurgitating automaton,3,CSmajor,CS-noun
-junior bug generator,2,CSmajor,CS-noun
-sleep‑deprived stack crawler,1,CSmajor,CS-noun
-Git commit coward,1,CSmajor,CS-noun
-code review crybaby,1,CSmajor,CS-noun
-copilot cult follower,2,CSmajor,CS-noun
-runtime failure philosopher,2,CSmajor,CS-noun
-feature creep lifeform,1,CSmajor,CS-noun
-Dockerless delinquent,2,CSmajor,CS-noun
-pull request parasite,1,CSmajor,CS-noun
-codebase liability,3,CSmajor,CS-noun
-vibecoding influencer,2,CSmajor,CS-noun
-chatGPT stacktrace climber,1,CSmajor,CS-noun
-self‑proclaimed “full‑stack” fraud,3,CSmajor,CS-noun
-library dependency junkie,2,CSmajor,CS-noun
-npm outbreak starter,2,CSmajor,CS-noun
-semicolon skeptic,1,CSmajor,CS-noun
-deprecated human resource,3,CSmajor,CS-noun
-AI‑generated impostor coder,2,CSmajor,CS-noun
-runtime clown,1,CSmajor,CS-noun
-algorithmic burnout,2,CSmajor,CS-noun
-commit history war criminal,2,CSmajor,CS-noun
-CSS sufferer,2,CSmajor,CS-noun
-cloud‑billing victim,1,CSmajor,CS-noun
-framework hopper,1,CSmajor,CS-noun
-keyboard malpractitioner,1,CSmajor,CS-noun
-legacy code larva,1,CSmajor,CS-noun
-README avoider,1,CSmajor,CS-noun
-debugging casualty,1,CSmajor,CS-noun
-Git repo vandal,1,CSmajor,CS-noun
-tech debt incubator,2,CSmajor,CS-noun
-vibe‑driven backend philosopher,1,CSmajor,CS-noun
-mid developer energy,2,CSmajor,CS-adjective
-nepo baby,3,CSmajor,CS-noun
-no future,4,CSmajor,CS-adjective
-greasy asf,4,CSmajor,CS-adjective
+syntax sniffer,1,CSmajor,noun
+celcius-fueled,1,CSmajor,noun
+keyboard gremlin,2,CSmajor,noun
+commit freak,2,CSmajor,noun
+stack overflow philosopher,1,CSmajor,noun
+pixel hoarder,1,CSmajor,noun
+semicolon junkie,1,CSmajor,noun
+debug goblin,2,CSmajor,noun
+binary bard,1,CSmajor,noun
+RAM hoarder,2,CSmajor,noun
+merge conflict magnet,2,CSmajor,noun
+algorithm addict,1,CSmajor,noun
+sleep-deprived coderling,2,CSmajor,noun
+spaghetti code sorcerer,2,CSmajor,noun
+API abuser,1,CSmajor,noun
+git pusher extraordinaire,1,CSmajor,noun
+commentless crusader,1,CSmajor,noun
+runtime rambler,1,CSmajor,noun
+deprecated dreamer,1,CSmajor,noun
+library leech,2,CSmajor,noun
+patchwork prodigy,1,CSmajor,noun
+infinite loop enthusiast,1,CSmajor,noun
+keyboard cowboy,1,CSmajor,noun
+code-smelling cryptid,1,CSmajor,noun
+whitespace warrior,1,CSmajor,noun
+bracket breaker,1,CSmajor,noun
+bug whisperer,1,CSmajor,noun
+RAM vampire,1,CSmajor,noun
+console log prophet,1,CSmajor,noun
+caffeine compiler,1,CSmajor,noun
+terminal troll,2,CSmajor,noun
+IDE hermit,1,CSmajor,noun
+compiler cultist,1,CSmajor,noun
+syntax savant,1,CSmajor,noun
+commit gremlin,1,CSmajor,noun
+variable vandal,1,CSmajor,noun
+rubber duck oracle,1,CSmajor,noun
+race condition romantic,1,CSmajor,noun
+overflow ogre,1,CSmajor,noun
+runtime rascal,2,CSmajor,noun
+object-oriented outlaw,1,CSmajor,noun
+stack trace poet,1,CSmajor,noun
+pointer poltergeist,1,CSmajor,noun
+CLI caveman,2,CSmajor,noun
+localhost recluse,1,CSmajor,noun
+cache gremlin,2,CSmajor,noun
+infinite recursion romantic,1,CSmajor,noun
+greasy,2,CSmajor,adjective
+code monkey,3,CSmajor,noun
+stinking,2,CSmajor,adjective
+basement dweller,3,CSmajor,noun
+Discord moderator,2,CSmajor,noun
+oily,3,CSmajor,adjective
+no-shower,3,CSmajor,adjective
+nerdy,2,CSmajor,adjective
+no-sleep,2,CSmajor,adjective
+unemployed,3,CSmajor,adjective
+neckbeard,4,CSmajor,noun
+league of legends player,4,CSmajor,noun
+no-grass-toucher,4,CSmajor,noun
+Reddit mod,3,CSmajor,noun
+soydev,2,CSmajor,noun
+vibecoder,2,CSmajor,noun
+Valorant enjoyer,3,CSmajor,noun
+no huzz,4,CSmajor,adjective
+AI prompt parrot,2,CSmajor,noun
+syntax-slop merchant,2,CSmajor,noun
+copy-paste connoisseur,1,CSmajor,noun
+vibecoding visionary,1,CSmajor,noun
+chatbot code whisperer,1,CSmajor,noun
+rubber duck reject,2,CSmajor,noun
+stack overflow beggar,2,CSmajor,noun
+merge conflict masochist,3,CSmajor,noun
+spaghetti architect,1,CSmajor,noun
+AI prompt engineer wannabe,2,CSmajor,noun
+terminally online tinkerer,2,CSmajor,noun
+keyboard atrophist,1,CSmajor,noun
+dark mode dungeon dweller,1,CSmajor,noun
+prompt-regurgitating automaton,3,CSmajor,noun
+junior bug generator,2,CSmajor,noun
+sleep‑deprived stack crawler,1,CSmajor,noun
+Git commit coward,1,CSmajor,noun
+code review crybaby,1,CSmajor,noun
+copilot cult follower,2,CSmajor,noun
+runtime failure philosopher,2,CSmajor,noun
+feature creep lifeform,1,CSmajor,noun
+Dockerless delinquent,2,CSmajor,noun
+pull request parasite,1,CSmajor,noun
+codebase liability,3,CSmajor,noun
+vibecoding influencer,2,CSmajor,noun
+chatGPT stacktrace climber,1,CSmajor,noun
+self‑proclaimed “full‑stack” fraud,3,CSmajor,noun
+library dependency junkie,2,CSmajor,noun
+npm outbreak starter,2,CSmajor,noun
+semicolon skeptic,1,CSmajor,noun
+deprecated human resource,3,CSmajor,noun
+AI‑generated impostor coder,2,CSmajor,noun
+runtime clown,1,CSmajor,noun
+algorithmic burnout,2,CSmajor,noun
+commit history war criminal,2,CSmajor,noun
+CSS sufferer,2,CSmajor,noun
+cloud‑billing victim,1,CSmajor,noun
+framework hopper,1,CSmajor,noun
+keyboard malpractitioner,1,CSmajor,noun
+legacy code larva,1,CSmajor,noun
+README avoider,1,CSmajor,noun
+debugging casualty,1,CSmajor,noun
+Git repo vandal,1,CSmajor,noun
+tech debt incubator,2,CSmajor,noun
+vibe‑driven backend philosopher,1,CSmajor,noun
+mid developer energy,2,CSmajor,adjective
+nepo baby,3,CSmajor,noun
+no future,4,CSmajor,adjective
+greasy asf,4,CSmajor,adjective
