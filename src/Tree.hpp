@@ -1,3 +1,6 @@
 // RB tree implementation to store Words
-#include "Tree.hpp"
+#include "Word.hpp"
 
+struct Tree {
+
+};
