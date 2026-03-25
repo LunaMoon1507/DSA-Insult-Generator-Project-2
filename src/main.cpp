@@ -74,8 +74,9 @@ int main()
                 std::cout << "Please choose a number 1-4!" << std::endl;
         }
 
-        std::cout << "Generating..." << std::endl;
-        std::cout << "Insult: " << std::endl; //insert result of function for insult here and add time it took
+        std::cout << "Generating..." << std::endl; // the lines will probably be replaced with the actuall function
+        std::cout << "Insult: " << std::endl; // this one for RB tree
+        std::cout << "Insult: " << std::endl; // this one for hash; function will print out insult. this is placeholder
 
         std::cout << "\nWould you like to insult again, or exit?\n 1. Generate another insult\n 2. Exit" << std::endl;
         std::cout << "Choice: ";
