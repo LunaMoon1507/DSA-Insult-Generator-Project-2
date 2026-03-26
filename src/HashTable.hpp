@@ -8,7 +8,7 @@ struct HashTable {
     HashTable() : hash_table(64, std::vector<Word*>(0)) {}
     ~HashTable();
     int hash(int POS, int vibe, int severity);
-    void insert(Word* data);
+    bool insert(Word* data);
     std::string get(std::string POS, std::string vibe, int severity);
     std::string getRandom(std::string POS);
 
