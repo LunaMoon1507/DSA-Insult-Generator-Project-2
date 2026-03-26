@@ -1,6 +1,7 @@
-#include "Word.hpp"
 #include <vector>
 #include <string>
+#include <random>
+#include "Word.hpp"
 
 struct HashTable {
     std::vector<std::vector<Word*>> hash_table;

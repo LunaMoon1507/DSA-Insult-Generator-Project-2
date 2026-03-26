@@ -1,6 +1,4 @@
 #include "HashTable.hpp"
-#include <stdexcept>
-#include <random>
 
 HashTable::~HashTable() {
     for (int i = 0; i < 64; i++) {
