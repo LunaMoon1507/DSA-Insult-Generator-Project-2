@@ -6,9 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(DSA_Insult_Generator_Project_2
         src/HashTable.hpp
         src/main.cpp
+        src/Tree.hpp
         src/Tree.cpp
-        src/Word.hpp
-        src/HashTable.cpp
         src/HashTable.hpp
-        src/main.cpp
+        src/HashTable.cpp
         src/Word.hpp)
