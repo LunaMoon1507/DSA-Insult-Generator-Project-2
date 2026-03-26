@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include "HashTable.hpp"
+#include "Word.hpp"
+#include "Tree.hpp"
 
 int main()
 {
