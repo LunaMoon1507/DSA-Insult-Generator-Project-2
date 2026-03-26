@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Word.hpp"
+#include <vector>
 
 enum Color { RED, BLACK };
 
@@ -13,6 +14,124 @@ struct Node { // Node that contains the word struct within it
 };
 
 class RBTree {
+public:
+    class Iterator {
+    private:
+        Node* current;
+        Node* nil;
+
+    public:
+        using iterator_category = std::forward_iterator_tag;
+        using value_type = Word;
+        using difference_type = std::ptrdiff_t;
+        using pointer = Word*;
+        using reference = Word&;
+
+        Iterator(Node* node, Node* nil) : current(node), nil(nil) {}
+        Word& operator*() const {
+            return current->data;
+        }
+        Word* operator->() const {
+            return &(current->data);
+        }
+        Iterator& operator++() {
+            if (current == nil) {
+                return *this;
+            }
+            if (current->right != nil) { // finds next node in an in order traversal
+                current = current->right;
+                while (current->left != nil) {
+                    current = current->left;
+                }
+            }
+            else {
+                Node* p = current->parent;
+                while (p != nullptr && current == p->right) {
+                    current = p;
+                    p = p->parent;
+                }
+                current = (p == nullptr) ? nil : p;
+            }
+            return *this;
+        }
+        bool operator==(const Iterator& other) const {
+            return current == other.current;
+        }
+        bool operator!=(const Iterator& other) const {
+            return current != other.current;
+        }
+    };
+
+    Iterator begin() const { //finds the first node in an in order traversal in the tree
+        Node* temp = root;
+        if (temp == nil) {
+            return Iterator(nil, nil);
+        }
+        while (temp->left != nil) {
+            temp = temp->left;
+        }
+        return Iterator(temp, nil);
+    }
+
+    Iterator end() const {
+        return Iterator(nil, nil);
+    }
+
+    RBTree() : treeSize(0) {
+        justInsertedNode = nullptr;
+        Word emptyWord = {"", "", "", 0};
+        nil = new Node(emptyWord);
+        nil->color = BLACK;
+        nil->left = nullptr;
+        nil->right = nullptr;
+        nil->parent = nullptr;
+        root = nil;
+    }
+
+    ~RBTree() {
+        destructorHelper(this->root);
+        delete nil;
+    }
+
+    void insert(const Word& newWord) {
+        justInsertedNode = nullptr;
+        root = insertHelper(root, newWord, nullptr);
+        fixInsert(justInsertedNode);
+        treeSize++;
+    }
+
+    void inOrderTraversal(Node* node) {
+        if (node == nil) {
+            return;
+        }
+        inOrderTraversal(node->left);
+        std::cout << node->data.severity << " ";
+        inOrderTraversal(node->right);
+    }
+
+    void printInOrder() {
+        inOrderTraversal(root);
+        std::cout << std::endl;
+    }
+
+    // gets all words with desired severity level and position in sentence
+    std::vector<Word> vectorOfWords(const int severity, const std::string& pos) {
+        std::vector<Word> words;
+        int currentSeverity = severity;
+        while (words.size() < 3 && currentSeverity != 0) { // loops until vector has at least 3 words
+            auto it = lowerBoundSeverity(currentSeverity);
+            auto treeEnd = end();
+            while (it != treeEnd && it->severity == currentSeverity) { // only loops within the desired severity section
+                if (it->pos == pos) {
+                    words.push_back(*it);
+                }
+                ++it;
+            }
+            currentSeverity--; // if vector has less than 3 words, it checks all the words in a severity level 1 lower than the current
+        }
+        return words;
+    }
+
 private:
     Node* root;
     Node* nil;
@@ -107,106 +226,22 @@ private:
         delete node;
     }
 
-public:
-    class Iterator {
-    private:
-        Node* current;
-        Node* nil;
-
-
-    public:
-        using iterator_category = std::forward_iterator_tag;
-        using value_type = Word;
-        using difference_type = std::ptrdiff_t;
-        using pointer = Word*;
-        using reference = Word&;
-
-        Iterator(Node* node, Node* nil) : current(node), nil(nil) {}
-        Word& operator*() const {
-            return current->data;
-        }
-        Word* operator->() const {
-            return &(current->data);
-        }
-        Iterator& operator++() {
-            if (current == nil) {
-                return *this;
-            }
-            if (current->right != nil) { // finds next node in an in order traversal
-                current = current->right;
-                while (current->left != nil) {
-                    current = current->left;
-                }
+    // finds the lowest boundry point of where the desired severity level starts
+    Iterator lowerBoundSeverity(int targetSeverity) const {
+        Node* current = root;
+        Node* lower = nil;
+        while (current != nil) {
+            if (current->data.severity >= targetSeverity) {
+                lower = current;
+                current = current->left;
             }
             else {
-                Node* p = current->parent;
-                while (p != nullptr && current == p->right) {
-                    current = p;
-                    p = p->parent;
-                }
-                current = (p == nullptr) ? nil : p;
+                current = current->right;
             }
-            return *this;
         }
-        bool operator==(const Iterator& other) const {
-            return current == other.current;
-        }
-        bool operator!=(const Iterator& other) const {
-            return current != other.current;
-        }
-    };
-
-    Iterator begin() const { //finds the first node in an in order traversal in the tree
-        Node* temp = root;
-        if (temp == nil) {
-            return Iterator(nil, nil);
-        }
-        while (temp->left != nil) {
-            temp = temp->left;
-        }
-        return Iterator(temp, nil);
+        return Iterator(lower, nil);
     }
 
-    Iterator end() const {
-        return Iterator(nil, nil);
-    }
-
-    RBTree() : treeSize(0) {
-        justInsertedNode = nullptr;
-        Word emptyWord = {"", "", "", 0};
-        nil = new Node(emptyWord);
-        nil->color = BLACK;
-        nil->left = nullptr;
-        nil->right = nullptr;
-        nil->parent = nullptr;
-        root = nil;
-    }
-
-    ~RBTree() {
-        destructorHelper(this->root);
-        delete nil;
-    }
-
-    void insert(Word newWord) {
-        justInsertedNode = nullptr;
-        root = insertHelper(root, newWord, nullptr);
-        fixInsert(justInsertedNode);
-        treeSize++;
-    }
-
-    void inOrderTraversal(Node* node) {
-        if (node == nil) {
-            return;
-        }
-        inOrderTraversal(node->left);
-        std::cout << node->data.severity << " ";
-        inOrderTraversal(node->right);
-    }
-
-    void printInOrder() {
-        inOrderTraversal(root);
-        std::cout << std::endl;
-    }
 };
 
 

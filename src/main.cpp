@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
-
+#include "Word.hpp"
+#include "Tree.cpp"
+#include "HashTable.hpp"
 int main()
 {
     int choice = 0;
