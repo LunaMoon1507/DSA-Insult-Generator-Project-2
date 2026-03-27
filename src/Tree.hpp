@@ -23,13 +23,10 @@ private:
 
     // insertion helper for insert function, done recursively
     Node* insertHelper(Node* node, const Word& data, Node* parent);
-
     void rotateLeft(Node* x);
     void rotateRight(Node* y);
-
     // balances the RB tree
     void fixInsert(Node* k);
-
     void destructorHelper(Node* node);
 
 public:
