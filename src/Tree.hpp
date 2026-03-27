@@ -1,8 +1,8 @@
 // RB tree implementation to store Words
 #pragma once
 #include <iostream>
-#include <string>
 #include "Word.hpp"
+#include "WordStructure.hpp"
 
 enum Color { RED, BLACK };
 
@@ -14,7 +14,7 @@ struct Node { // Node that contains the word struct within it
     explicit Node(const Word& w) : data(w), color(RED), left(nullptr), right(nullptr), parent(nullptr) {}
 };
 
-class RBTree {
+class RBTree : public WordStructure {
 private:
     Node* root;
     Node* nil;
@@ -112,8 +112,8 @@ public:
     ~RBTree();
 
     void insert(const Word& newWord);
-    std::vector<Word> vectorOfWords(const std::string& pos, const std::string& vibe, const int severity);
-    Word get(const std::string& pos, const std::string& vibe, const int severity);
+    std::vector<Word> vectorOfWords(std::string& pos, std::string& vibe, int severity);
+    std::string get(std::string pos, std::string vibe, int severity);
     void inOrderTraversal(Node* node);
     void printInOrder();
 };

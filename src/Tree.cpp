@@ -43,22 +43,22 @@ void RBTree::printInOrder() {
     std::cout << std::endl;
 }
 
-Word RBTree::get(const std::string& pos, const std::string& vibe, const int severity) {
+std::string RBTree::get(std::string pos, std::string vibe, int severity) {
     std::vector<Word> candidates = vectorOfWords(pos, vibe, severity);
     if (candidates.empty()) {
         Word emptyWord = {"", "", "", 0};
-        return emptyWord;
+        return " ";
     }
     static std::random_device rd;
     static std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, candidates.size() - 1);
     int randomIndex = dis(gen);
 
-    return candidates[randomIndex];
+    return candidates[randomIndex].word;
 }
 
 // gets all words with desired severity level and position in sentence
-std::vector<Word> RBTree::vectorOfWords(const std::string& pos, const std::string& vibe, const int severity) {
+std::vector<Word> RBTree::vectorOfWords(std::string& pos, std::string& vibe, int severity) {
     std::vector<Word> words;
     int currentSeverity = severity;
     while (words.size() < 3 && currentSeverity != 0) { // loops until vector has at least 3 words

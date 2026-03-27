@@ -4,6 +4,7 @@
 #include <string>
 #include <chrono>
 #include <random>
+#include "WordStructure.hpp"
 #include "HashTable.hpp"
 #include "Word.hpp"
 #include "Tree.hpp"
@@ -40,103 +41,53 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
     }
 }
 
-std::string sentence1Hash(HashTable* hash, std::string vibe, int severity) {
+std::string sentence1(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "You're a "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity) + " and a "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity)
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity) + " and a "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity)
         + ", and worst of all a "
-        + hash->get("adjective","CSmajor",severity)
+        + words->get("adjective","CSmajor",severity)
         + " CS major!";
     return newSentence;
 }
 
-std::string sentence2Hash(HashTable* hash, std::string vibe, int severity) {
+std::string sentence2Hash(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "Imagine being a "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity) + ", you "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity)
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity) + ", you "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity)
         + " of a "
-        + hash->get("noun","CSmajor",severity) + "!";
+        + words->get("noun","CSmajor",severity) + "!";
     return newSentence;
 }
 
-std::string sentence3Hash(HashTable* hash, std::string vibe, int severity) {
+std::string sentence3Hash(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "You should "
-        + hash->get("verb",vibe,severity) + " in a "
-        + hash->get("noun",vibe,severity) + " and a "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity) + ", you "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun","CSmajor",severity) + "!";
+        + words->get("verb",vibe,severity) + " in a "
+        + words->get("noun",vibe,severity) + " and a "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity) + ", you "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun","CSmajor",severity) + "!";
     return newSentence;
 }
 
-std::string sentence4Hash(HashTable* hash, std::string vibe, int severity) {
+std::string sentence4Hash(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "You're just a "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity) + " of a "
-        + hash->get("adjective","CSmajor",severity)
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("adjective",vibe,severity) + " "
+        + words->get("noun",vibe,severity) + " of a "
+        + words->get("adjective","CSmajor",severity)
         + " CS major, so stop "
-        + hash->get("verb",vibe,severity) + " and be a quiet "
-        + hash->get("noun","CSmajor",severity) + ".";
+        + words->get("verb",vibe,severity) + " and be a quiet "
+        + words->get("noun","CSmajor",severity) + ".";
     return newSentence;
 }
-
-/*
-std::string sentence1Tree(RBTree* tree, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("noun",vibe,severity) + " of a "
-        + tree->get("adjective","CSmajor",severity)
-        + " CS major, so stop "
-        + tree->get("verb",vibe,severity) + " and be a quiet "
-        + tree->get("noun","CSmajor",severity) + ".";
-    return newSentence;
-}
-
-std::string sentence2Tree(RBTree* tree, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("noun",vibe,severity) + " of a "
-        + tree->get("adjective","CSmajor",severity)
-        + " CS major, so stop "
-        + tree->get("verb",vibe,severity) + " and be a quiet "
-        + tree->get("noun","CSmajor",severity) + ".";
-    return newSentence;
-}
-
-std::string sentence3Tree(RBTree* tree, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("noun",vibe,severity) + " of a "
-        + tree->get("adjective","CSmajor",severity)
-        + " CS major, so stop "
-        + tree->get("verb",vibe,severity) + " and be a quiet "
-        + tree->get("noun","CSmajor",severity) + ".";
-    return newSentence;
-}
-
-std::string sentence4Tree(RBTree* tree, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("adjective",vibe,severity) + " "
-        + tree->get("noun",vibe,severity) + " of a "
-        + tree->get("adjective","CSmajor",severity)
-        + " CS major, so stop "
-        + tree->get("verb",vibe,severity) + " and be a quiet "
-        + tree->get("noun","CSmajor",severity) + ".";
-    return newSentence;
-}
-*/
 
 int main()
 {
@@ -234,7 +185,7 @@ int main()
         startTime = std::chrono::high_resolution_clock::now();
         switch (randomNum) {
             case 1:
-                sentence = sentence1Hash(hash,vibe,severity);
+                sentence = sentence1(hash,vibe,severity);
                 break;
             case 2:
                 sentence = sentence2Hash(hash,vibe,severity);
