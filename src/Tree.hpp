@@ -95,7 +95,7 @@ public:
     RBTree();
     ~RBTree();
 
-    void insert(Word newWord);
+    void insert(Word* newWord);
     void inOrderTraversal(Node* node);
     void printInOrder();
 };

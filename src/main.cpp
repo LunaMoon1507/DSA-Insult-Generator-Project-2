@@ -7,7 +7,7 @@
 #include "Word.hpp"
 #include "Tree.hpp"
 
-void loadHashData(HashTable* hash, std::string fileName) {
+void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
     std::ifstream file(fileName);
     if (!file.is_open()) {
         std::cerr << "Error: .csv failed to open.\n";
@@ -34,6 +34,7 @@ void loadHashData(HashTable* hash, std::string fileName) {
         }
 
         hash->insert(entry);
+        tree->insert(entry);
         delete entry;
     }
 }
@@ -110,29 +111,27 @@ int main()
         }
 
         // Loading .csv data into hash table and timing it
-        std::cout << "\nLoading data into hash table..." << std::endl;
+        std::cout << "\nLoading data..." << std::endl;
         auto startTime = std::chrono::high_resolution_clock::now();
         HashTable *hash = new HashTable();
-        loadHashData(hash,"../databases/wordnet-db-3.csv");
-        loadHashData(hash,"../databases/professional-db.csv");
-        loadHashData(hash,"../databases/explicit-db-cleaned.csv");
-        loadHashData(hash,"../databases/brainrot-db.csv");
-        loadHashData(hash,"../databases/CSmajor-database.csv");
+        RBTree *tree = new RBTree();
+        insertData(hash,tree,"../databases/wordnet-db-3.csv");
+        insertData(hash,tree,"../databases/professional-db.csv");
+        insertData(hash,tree,"../databases/explicit-db-cleaned.csv");
+        insertData(hash,tree,"../databases/brainrot-db.csv");
+        insertData(hash,tree,"../databases/CSmajor-database.csv");
         auto endTime = std::chrono::high_resolution_clock::now();
         auto durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
         std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
-        // Loading .csv data into red-black tree and timing it
-        std::cout << "\nLoading data into red-black tree..." << std::endl;
-        startTime = std::chrono::high_resolution_clock::now();
-        // TODO: insert Loading logic here
-        endTime = std::chrono::high_resolution_clock::now();
-        durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
-
         // Creating the insult strings
-        std::cout << "Insult: " << std::endl; // this one for RB tree
-        std::cout << "Insult: " << std::endl; // this one for hash function
+        std::cout << "\nGenerating insults..." << std::endl;
+        std::cout << "Hash Table Insult: " << std::endl; // this one for RB tree
+        // TODO: implement timing for hash table
+        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
+        std::cout << "Red Black Tree Insult: " << std::endl; // this one for hash function
+        // TODO: implement timing for RB tree
+        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
         // Main menu loop
         std::cout << "\nWould you like to insult again, or exit?\n 1. Generate another insult\n 2. Exit" << std::endl;

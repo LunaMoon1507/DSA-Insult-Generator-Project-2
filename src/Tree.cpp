@@ -104,9 +104,9 @@ RBTree::~RBTree() {
     delete nil;
 }
 
-void RBTree::insert(Word newWord) {
+void RBTree::insert(Word* newWord) {
     justInsertedNode = nullptr;
-    root = insertHelper(root, newWord, nullptr);
+    root = insertHelper(root, *newWord, nullptr);
     fixInsert(justInsertedNode);
     treeSize++;
 }
