@@ -1,8 +1,21 @@
 #include <iostream>
 #include <string>
-#include "Word.hpp"
 #include <vector>
+#include <utility>
+#include <random>
+#include <algorithm>
 
+struct Word {
+    std::string word;
+    std::string pos;
+    std::string vibe;
+    int severity  = 0;
+
+    Word() = default;
+
+    Word(std::string w, std::string p, std::string v, int s) :
+        word(std::move(w)), pos(std::move(p)), vibe(std::move(v)), severity(s) {}
+};
 enum Color { RED, BLACK };
 
 struct Node { // Node that contains the word struct within it
@@ -114,15 +127,35 @@ public:
         std::cout << std::endl;
     }
 
+    Word get(const std::string& pos, const std::string& vibe, const int severity) {
+        std::vector<Word> candidates = vectorOfWords(pos, vibe, severity);
+        if (candidates.empty()) {
+            Word emptyWord = {"", "", "", 0};
+            return emptyWord;
+        }
+        static std::random_device rd;
+        static std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(0, candidates.size() - 1);
+        int randomIndex = dis(gen);
+
+        return candidates[randomIndex];
+    }
+
+private:
+    Node* root;
+    Node* nil;
+    size_t treeSize;
+    Node* justInsertedNode;
+
     // gets all words with desired severity level and position in sentence
-    std::vector<Word> vectorOfWords(const int severity, const std::string& pos) {
+    std::vector<Word> vectorOfWords(const std::string& pos, const std::string& vibe, const int severity) {
         std::vector<Word> words;
         int currentSeverity = severity;
         while (words.size() < 3 && currentSeverity != 0) { // loops until vector has at least 3 words
             auto it = lowerBoundSeverity(currentSeverity);
             auto treeEnd = end();
             while (it != treeEnd && it->severity == currentSeverity) { // only loops within the desired severity section
-                if (it->pos == pos) {
+                if (it->pos == pos && it->vibe == vibe) {
                     words.push_back(*it);
                 }
                 ++it;
@@ -131,12 +164,6 @@ public:
         }
         return words;
     }
-
-private:
-    Node* root;
-    Node* nil;
-    size_t treeSize;
-    Node* justInsertedNode;
 
     Node* insertHelper(Node* node, const Word& data, Node* parent) { // insertion helper for insert function, done recursively
         if (node == nil) {
@@ -243,5 +270,4 @@ private:
     }
 
 };
-
 
