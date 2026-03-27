@@ -41,7 +41,7 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
 }
 
 std::string sentence1Hash(HashTable* hash, std::string vibe, int severity) {
-    std::string newSentence = "You’re a "
+    std::string newSentence = "You're a "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("noun",vibe,severity) + " and an "
         + hash->get("adjective",vibe,severity) + " "
@@ -77,7 +77,7 @@ std::string sentence3Hash(HashTable* hash, std::string vibe, int severity) {
 }
 
 std::string sentence4Hash(HashTable* hash, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
+    std::string newSentence = "You're just a "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("noun",vibe,severity) + " of a "
