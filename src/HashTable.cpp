@@ -1,5 +1,4 @@
 #include "HashTable.hpp"
-#include <stdexcept>
 #include <random>
 
 HashTable::~HashTable() {
@@ -11,10 +10,11 @@ HashTable::~HashTable() {
 }
 
 int HashTable::hash(int POS, int vibe, int severity) {
-    if (POS < 0 || POS > 3 || vibe < 0 || vibe > 3 || severity < 0 || severity > 3 ) {
-        return -1; // eventualy remove but will be amazing for debugging
+    if (POS < 0 || POS > 3 || vibe < 0 || vibe > 4 || severity < 1 || severity > 4 ) {
+        return -1;
     }
-    return severity * 16 + vibe * 4 + POS;
+
+    return (severity-1) * 20 + vibe * 4 + POS;
 }
 
 bool HashTable::insert(Word* data) {
@@ -31,7 +31,6 @@ std::string HashTable::get(std::string POS, std::string vibe, int desiredSeverit
     std::random_device rd;
     std::mt19937 gen(rd());
     int desiredPOS = decodePOS(POS);
-    if (desiredPOS == -1) return "";
     int desiredVibe = decodeVibe(vibe);
     int desiredHash = hash(desiredPOS, desiredVibe, desiredSeverity);
     if (desiredHash == -1) return "";
@@ -41,7 +40,7 @@ std::string HashTable::get(std::string POS, std::string vibe, int desiredSeverit
     std::uniform_int_distribution<int> dist(0, vecLen-1);
     return hash_table[desiredHash][dist(gen)]->word;
 }
-
+/*
 std::string HashTable::getRandom(std::string POS) {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -57,6 +56,8 @@ std::string HashTable::getRandom(std::string POS) {
     std::uniform_int_distribution<int> distL(0, vecLen-1);
     return hash_table[desiredHash][distL(gen)]->word;
 }
+*/
+
 int HashTable::decodePOS(std::string str) {
     if (str == "noun") return 0;
     if (str == "adjective") return 1;
@@ -65,8 +66,9 @@ int HashTable::decodePOS(std::string str) {
 }
 
 int HashTable::decodeVibe(std::string str) {
-    if (str == "brainrot") return 0;
-    if (str == "CSmajor") return 1;
-    if (str == "explicit") return 2;
-    return 3; // works for professional, but also typos
+    if (str == "brainrot")  return 0;
+    if (str == "random")return 1;
+    if (str == "CSmajor") return 2;
+    if (str == "explicit") return 3;
+    return 4; // works for professional, but also typos
 }
