@@ -92,10 +92,28 @@ public:
         return Iterator(nil, nil);
     }
 
+    // finds the lowest boundry point of where the desired severity level starts
+    Iterator lowerBoundSeverity(int targetSeverity) const {
+        Node* current = root;
+        Node* lower = nil;
+        while (current != nil) {
+            if (current->data.severity >= targetSeverity) {
+                lower = current;
+                current = current->left;
+            }
+            else {
+                current = current->right;
+            }
+        }
+        return Iterator(lower, nil);
+    }
+
     RBTree();
     ~RBTree();
 
-    void insert(Word* newWord);
+    void insert(const Word& newWord);
+    std::vector<Word> vectorOfWords(const std::string& pos, const std::string& vibe, const int severity);
+    Word get(const std::string& pos, const std::string& vibe, const int severity);
     void inOrderTraversal(Node* node);
     void printInOrder();
 };
