@@ -111,7 +111,7 @@ public:
     RBTree();
     ~RBTree();
 
-    void insert(const Word& newWord);
+    void insert(Word* newWord);
     std::vector<Word> vectorOfWords(std::string& pos, std::string& vibe, int severity);
     std::string get(std::string pos, std::string vibe, int severity);
     void inOrderTraversal(Node* node);

@@ -36,8 +36,8 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
         }
 
         hash->insert(entry);
-        //tree->insert(entry);
-        //delete entry;
+        tree->insert(entry);
+        delete entry;
     }
 }
 
@@ -54,7 +54,7 @@ std::string sentence1(WordStructure* words, std::string vibe, int severity) {
     return newSentence;
 }
 
-std::string sentence2Hash(WordStructure* words, std::string vibe, int severity) {
+std::string sentence2(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "Imagine being a "
         + words->get("adjective",vibe,severity) + " "
         + words->get("noun",vibe,severity) + ", you "
@@ -66,7 +66,7 @@ std::string sentence2Hash(WordStructure* words, std::string vibe, int severity) 
     return newSentence;
 }
 
-std::string sentence3Hash(WordStructure* words, std::string vibe, int severity) {
+std::string sentence3(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "You should "
         + words->get("verb",vibe,severity) + " in a "
         + words->get("noun",vibe,severity) + " and a "
@@ -77,7 +77,7 @@ std::string sentence3Hash(WordStructure* words, std::string vibe, int severity) 
     return newSentence;
 }
 
-std::string sentence4Hash(WordStructure* words, std::string vibe, int severity) {
+std::string sentence4(WordStructure* words, std::string vibe, int severity) {
     std::string newSentence = "You're just a "
         + words->get("adjective",vibe,severity) + " "
         + words->get("adjective",vibe,severity) + " "
@@ -188,13 +188,13 @@ int main()
                 sentence = sentence1(hash,vibe,severity);
                 break;
             case 2:
-                sentence = sentence2Hash(hash,vibe,severity);
+                sentence = sentence2(hash,vibe,severity);
                 break;
             case 3:
-                sentence = sentence3Hash(hash,vibe,severity);
+                sentence = sentence3(hash,vibe,severity);
                 break;
             case 4:
-                sentence = sentence4Hash(hash,vibe,severity);
+                sentence = sentence4(hash,vibe,severity);
                 break;
             default:
                 sentence = "";
@@ -206,26 +206,24 @@ int main()
         std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
         // Creating insult string with RB Tree
-        // TODO: implement sentence generation for RB tree!
         startTime = std::chrono::high_resolution_clock::now();
-        /*
         switch (randomNum) {
             case 1:
-                sentence = sentence1Tree(tree,vibe,severity);
+                sentence = sentence1(tree,vibe,severity);
                 break;
             case 2:
-                sentence = sentence2Tree(tree,vibe,severity);
+                sentence = sentence2(tree,vibe,severity);
                 break;
             case 3:
-                sentence = sentence3Tree(tree,vibe,severity);
+                sentence = sentence3(tree,vibe,severity);
                 break;
             case 4:
-                sentence = sentence4Tree(tree,vibe,severity);
+                sentence = sentence4(tree,vibe,severity);
                 break;
             default:
                 sentence = "";
                 break;
-        } */
+        }
         endTime = std::chrono::high_resolution_clock::now();
         durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
         std::cout << "Red Black Tree Insult: " << sentence << std::endl;
@@ -239,11 +237,8 @@ int main()
         if (whileLoop == 1){
             continue;
         }
-        else {
-            // std::cout << "\nPlease choose 1 or 2!" << std::endl;
-            stillGenerate = false;
-            std::cout << "\nExiting program..." << std::endl;
-        }
+        stillGenerate = false;
+        std::cout << "\nExiting program..." << std::endl;
     }
     std::cout << "\nGoodbye, see you next time!\n(CS Major Insult Generator is not liable for any damages caused by using this program)" << std::endl;
     return 0;
