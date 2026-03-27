@@ -20,9 +20,9 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
         std::string word, pos, vibe, severityStr;
 
         getline(ss, word, ',');
-        getline(ss, pos, ',');
-        getline(ss, vibe, ',');
         getline(ss, severityStr, ',');
+        getline(ss, vibe, ',');
+        getline(ss, pos, ',');
 
         Word *entry = new Word();
         entry->word = word;
@@ -35,15 +35,15 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
         }
 
         hash->insert(entry);
-        tree->insert(entry);
-        delete entry;
+        //tree->insert(entry);
+        //delete entry;
     }
 }
 
 std::string sentence1Hash(HashTable* hash, std::string vibe, int severity) {
-    std::string newSentence = "You’re a "
+    std::string newSentence = "You're a "
         + hash->get("adjective",vibe,severity) + " "
-        + hash->get("noun",vibe,severity) + " and an "
+        + hash->get("noun",vibe,severity) + " and a "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("noun",vibe,severity)
@@ -68,7 +68,7 @@ std::string sentence2Hash(HashTable* hash, std::string vibe, int severity) {
 std::string sentence3Hash(HashTable* hash, std::string vibe, int severity) {
     std::string newSentence = "You should "
         + hash->get("verb",vibe,severity) + " in a "
-        + hash->get("noun",vibe,severity) + " and an "
+        + hash->get("noun",vibe,severity) + " and a "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("noun",vibe,severity) + ", you "
         + hash->get("adjective",vibe,severity) + " "
@@ -77,7 +77,7 @@ std::string sentence3Hash(HashTable* hash, std::string vibe, int severity) {
 }
 
 std::string sentence4Hash(HashTable* hash, std::string vibe, int severity) {
-    std::string newSentence = "You’re just a "
+    std::string newSentence = "You're just a "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("adjective",vibe,severity) + " "
         + hash->get("noun",vibe,severity) + " of a "
@@ -177,20 +177,20 @@ int main()
         switch (choice){ // mode selection
             case 1:
                 std::cout << "You have chosen Random Mode :|\n" << std::endl;
-                vibe = "Random";
+                vibe = "random";
                 break;
 
             case 2:
                 std::cout << "You have chosen Explicit Mode o_o\n" << std::endl;
-                vibe = "Explicit";
+                vibe = "explicit";
                 break;
             case 3:
                 std::cout << "You have chosen Brainrot Mode!!\n" << std::endl;
-                vibe = "Brainrot";
+                vibe = "brainrot";
                 break;
             case 4:
                 std::cout << "You have chosen Professional Mode.\n" << std::endl;
-                vibe = "Professional";
+                vibe = "professional";
                 break;
             default: break;
         }
