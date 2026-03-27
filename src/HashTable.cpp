@@ -2,7 +2,7 @@
 #include <random>
 
 HashTable::~HashTable() {
-    for (int i = 0; i < 64; i++) {
+    for (int i = 0; i < 80; i++) {
         for (Word* w : hash_table[i]) {
             delete w;
         }
