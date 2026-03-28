@@ -138,8 +138,7 @@ std::string sentence4Tree(RBTree* tree, std::string vibe, int severity) {
 }
 */
 
-int main()
-{
+int main() {
     int choice = 0;
     int severity = 0;
     std::string vibe;
@@ -162,6 +161,8 @@ int main()
 
     // Text interface
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
+
+
 
     while(stillGenerate){
         std::cout << "\nWhat vibe would you like your insult to have?\n(1) Random\n(2) Explicit\n(3) Brainrot\n(4) Professional" << std::endl;
