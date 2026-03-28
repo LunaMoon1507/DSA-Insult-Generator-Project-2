@@ -1,8 +1,8 @@
 // RB tree implementation to store Words
 #pragma once
 #include <iostream>
-#include <string>
 #include "Word.hpp"
+#include "WordStructure.hpp"
 
 enum Color { RED, BLACK };
 
@@ -14,7 +14,7 @@ struct Node { // Node that contains the word struct within it
     explicit Node(const Word& w) : data(w), color(RED), left(nullptr), right(nullptr), parent(nullptr) {}
 };
 
-class RBTree {
+class RBTree : public WordStructure {
 private:
     Node* root;
     Node* nil;
@@ -92,10 +92,28 @@ public:
         return Iterator(nil, nil);
     }
 
+    // finds the lowest boundry point of where the desired severity level starts
+    Iterator lowerBoundSeverity(int targetSeverity) const {
+        Node* current = root;
+        Node* lower = nil;
+        while (current != nil) {
+            if (current->data.severity >= targetSeverity) {
+                lower = current;
+                current = current->left;
+            }
+            else {
+                current = current->right;
+            }
+        }
+        return Iterator(lower, nil);
+    }
+
     RBTree();
     ~RBTree();
 
     void insert(Word* newWord);
+    std::vector<Word> vectorOfWords(std::string& pos, std::string& vibe, int severity);
+    std::string get(std::string pos, std::string vibe, int severity);
     void inOrderTraversal(Node* node);
     void printInOrder();
 };
