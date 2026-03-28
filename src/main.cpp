@@ -34,10 +34,8 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
         } catch (...) {
             entry->severity = 1;
         }
-
         hash->insert(entry);
         tree->insert(entry);
-        delete entry;
     }
 }
 
