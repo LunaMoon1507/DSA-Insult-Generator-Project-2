@@ -37,7 +37,7 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
 
         hash->insert(entry);
         tree->insert(entry);
-        delete entry;
+        //delete entry;
     }
 }
 
