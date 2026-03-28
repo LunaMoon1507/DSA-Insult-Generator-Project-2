@@ -10,4 +10,5 @@ add_executable(DSA_Insult_Generator_Project_2
         src/Tree.cpp
         src/HashTable.hpp
         src/HashTable.cpp
-        src/Word.hpp)
+        src/Word.hpp
+        src/WordStructure.hpp)

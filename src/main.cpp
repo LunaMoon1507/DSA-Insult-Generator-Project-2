@@ -34,10 +34,8 @@ void insertData(HashTable* hash, RBTree* tree, std::string fileName) {
         } catch (...) {
             entry->severity = 1;
         }
-
         hash->insert(entry);
         tree->insert(entry);
-        //delete entry;
     }
 }
 
@@ -108,14 +106,18 @@ int main()
     insertData(hash,tree,"../databases/brainrot-db.csv");
     insertData(hash,tree,"../databases/CSmajor-database.csv");
     auto endTime = std::chrono::high_resolution_clock::now();
-    auto durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-    std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
+    auto durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+    std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
 
     // Text interface
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
 
     while(stillGenerate){
-        std::cout << "\nWhat vibe would you like your insult to have?\n(1) Random\n(2) Explicit\n(3) Brainrot\n(4) Professional" << std::endl;
+        std::cout << "\nWhat vibe would you like your insult to have?" << std::endl;
+        std::cout << "(1) Random"<< std::endl;
+        std::cout << "(2) Professional" << std::endl;
+        std::cout << "(3) Brainrot" << std::endl;
+        //std::cout << "(4) Explicit" << std::endl;
         std::cout << "Choice: ";
         std::cin >> choice;
 
@@ -132,16 +134,16 @@ int main()
                 break;
 
             case 2:
-                std::cout << "You have chosen Explicit Mode o_o\n" << std::endl;
-                vibe = "explicit";
+                std::cout << "You have chosen Professional Mode.\n" << std::endl;
+                vibe = "professional";
                 break;
             case 3:
                 std::cout << "You have chosen Brainrot Mode!!\n" << std::endl;
                 vibe = "brainrot";
                 break;
             case 4:
-                std::cout << "You have chosen Professional Mode.\n" << std::endl;
-                vibe = "professional";
+                std::cout << "You have chosen Professional Mode o_o\n" << std::endl;
+                vibe = "explicit";
                 break;
             default: break;
         }
@@ -201,9 +203,9 @@ int main()
                 break;
         }
         endTime = std::chrono::high_resolution_clock::now();
-        durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+        durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
         std::cout << "Hash Table Insult: " << sentence << std::endl;
-        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
+        std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
 
         // Creating insult string with RB Tree
         startTime = std::chrono::high_resolution_clock::now();
@@ -225,9 +227,9 @@ int main()
                 break;
         }
         endTime = std::chrono::high_resolution_clock::now();
-        durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+        durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
         std::cout << "Red Black Tree Insult: " << sentence << std::endl;
-        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
+        std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
 
         // Main menu loop
         std::cout << "\nWould you like to insult again, or exit?\n 1. Generate another insult\n 2. Exit" << std::endl;
