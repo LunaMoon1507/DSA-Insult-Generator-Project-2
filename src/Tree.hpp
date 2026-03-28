@@ -1,6 +1,9 @@
 // RB tree implementation to store Words
 #pragma once
 #include <iostream>
+#include <string>
+#include <vector>
+#include <random>
 #include "Word.hpp"
 #include "WordStructure.hpp"
 
