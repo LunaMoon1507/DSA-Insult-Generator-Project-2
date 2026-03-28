@@ -106,8 +106,8 @@ int main()
     insertData(hash,tree,"../databases/brainrot-db.csv");
     insertData(hash,tree,"../databases/CSmajor-database.csv");
     auto endTime = std::chrono::high_resolution_clock::now();
-    auto durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
-    std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
+    auto durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+    std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
     // Text interface
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
@@ -199,9 +199,9 @@ int main()
                 break;
         }
         endTime = std::chrono::high_resolution_clock::now();
-        durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+        durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
         std::cout << "Hash Table Insult: " << sentence << std::endl;
-        std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
+        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
         // Creating insult string with RB Tree
         startTime = std::chrono::high_resolution_clock::now();
@@ -223,9 +223,9 @@ int main()
                 break;
         }
         endTime = std::chrono::high_resolution_clock::now();
-        durationTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+        durationTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
         std::cout << "Red Black Tree Insult: " << sentence << std::endl;
-        std::cout << "(Took " << durationTime.count() << " microseconds)" << std::endl;
+        std::cout << "(Took " << durationTime.count() << " milliseconds)" << std::endl;
 
         // Main menu loop
         std::cout << "\nWould you like to insult again, or exit?\n 1. Generate another insult\n 2. Exit" << std::endl;

@@ -162,4 +162,3 @@ void RBTree::destructorHelper(Node* node) {
     destructorHelper(node->right);
     delete node;
 }
-
