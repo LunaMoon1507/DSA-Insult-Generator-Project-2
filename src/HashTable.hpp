@@ -12,7 +12,7 @@ private:
     int decodeVibe(std::string str);
 
 public:
-    HashTable() : hash_table(64, std::vector<Word*>(0)) {}
+    HashTable() : hash_table(80, std::vector<Word*>(0)) {}
     ~HashTable();
 
     bool insert(Word* data);

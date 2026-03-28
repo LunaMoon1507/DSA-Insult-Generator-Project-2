@@ -104,6 +104,7 @@ int main()
     RBTree *tree = new RBTree();
     insertData(hash,tree,"../databases/wordnet-db-3.csv");
     insertData(hash,tree,"../databases/professional-db.csv");
+    insertData(hash,tree,"../databases/explicit-db-cleaned.csv");
     insertData(hash,tree,"../databases/brainrot-db.csv");
     insertData(hash,tree,"../databases/CSmajor-database.csv");
     auto endTime = std::chrono::high_resolution_clock::now();
@@ -114,12 +115,12 @@ int main()
     std::cout << "\nWelcome to the CS Major insult generator!" << std::endl;
 
     while(stillGenerate){
-        std::cout << "\nWhat vibe would you like your insult to have?\n(1) Random\n(2) Brainrot\n(3) Professional" << std::endl;
+        std::cout << "\nWhat vibe would you like your insult to have?\n(1) Random\n(2) Explicit\n(3) Brainrot\n(4) Professional" << std::endl;
         std::cout << "Choice: ";
         std::cin >> choice;
 
         if(std::cin.fail() || choice < 1 || choice > 4){ // checks for valid input, 1-4 only
-            std::cout << "\nPlease choose a number 1-3!\n" << std::endl;
+            std::cout << "\nPlease choose a number 1-4!\n" << std::endl;
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             continue;
@@ -131,10 +132,14 @@ int main()
                 break;
 
             case 2:
+                std::cout << "You have chosen Explicit Mode o_o\n" << std::endl;
+                vibe = "explicit";
+                break;
+            case 3:
                 std::cout << "You have chosen Brainrot Mode!!\n" << std::endl;
                 vibe = "brainrot";
                 break;
-            case 3:
+            case 4:
                 std::cout << "You have chosen Professional Mode.\n" << std::endl;
                 vibe = "professional";
                 break;
