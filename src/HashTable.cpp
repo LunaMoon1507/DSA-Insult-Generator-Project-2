@@ -2,7 +2,7 @@
 #include <random>
 
 HashTable::~HashTable() {
-    for (int i = 0; i < 80; i++) {
+    for (int i = 0; i < 64; i++) {
         for (Word* w : hash_table[i]) {
             delete w;
         }
@@ -10,11 +10,11 @@ HashTable::~HashTable() {
 }
 
 int HashTable::hash(int POS, int vibe, int severity) {
-    if (POS < 0 || POS > 3 || vibe < 0 || vibe > 4 || severity < 1 || severity > 4 ) {
+    if (POS < 0 || POS > 3 || vibe < 0 || vibe > 3 || severity < 1 || severity > 4 ) {
         return -1;
     }
 
-    return (severity-1) * 20 + vibe * 4 + POS;
+    return (severity-1) * 16 + vibe * 4 + POS;
 }
 
 bool HashTable::insert(Word* data) {
@@ -69,6 +69,5 @@ int HashTable::decodeVibe(std::string str) {
     if (str == "brainrot")  return 0;
     if (str == "random")return 1;
     if (str == "CSmajor") return 2;
-    if (str == "explicit") return 3;
-    return 4; // works for professional, but also typos
+    return 3; // works for professional, but also typos
 }
